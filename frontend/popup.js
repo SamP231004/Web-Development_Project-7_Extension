@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000"); // Make sure this URL is correct
+const socket = io("https://web-development-project-7-extension.onrender.com");
 const messagesContainer = document.getElementById("messages");
 const messageInput = document.getElementById("message-input");
 const sendBtn = document.getElementById("send-btn");
@@ -17,11 +17,10 @@ sendBtn.addEventListener("click", () => {
     const message = messageInput.value;
     if (message) {
         socket.emit("sendMessage", message);
-        messageInput.value = "";  // Clear the input after sending
+        messageInput.value = "";
     }
 });
 
-// Optionally, send message when hitting 'Enter' key
 messageInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         sendBtn.click();

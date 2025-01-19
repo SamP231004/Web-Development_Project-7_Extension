@@ -14,20 +14,18 @@
     "default_popup": "popup.html"
   },
   "host_permissions": [
-    "http://localhost:5000/*",
-    "https://localhost:5000/*"
+    "https://web-development-project-7-extension.onrender.com/*"
   ],
   "content_security_policy": {
     "script-src": [
-      "'self'",
-      "http://localhost:5000",
-      "https://cdnjs.cloudflare.com"
+      "'self'"
+    ],
+    "script-src-elem": [
+      "https://web-development-project-7-extension.onrender.com/socket.io/socket.io.js#d43f19733c4ce96292872d5ddf5d774fd6d7984322957e3c6b98fe224f4535bf"
     ],
     "connect-src": [
       "'self'",
-      "http://localhost:5000",
-      "ws://localhost:5000",
-      "wss://localhost:5000"
+      "https://web-development-project-7-extension.onrender.com/*"
     ],
     "object-src": "'self'"
   },
