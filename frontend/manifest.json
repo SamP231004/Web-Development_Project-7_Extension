@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Group Chat Extension",
+  "description": "A browser extension for group chat.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "https://localhost:5000/*"
+  ],
+  "content_security_policy": {
+    "script-src": [
+      "'self'",
+      "http://localhost:5000",
+      "https://cdnjs.cloudflare.com"
+    ],
+    "connect-src": [
+      "'self'",
+      "http://localhost:5000",
+      "ws://localhost:5000",
+      "wss://localhost:5000"
+    ],
+    "object-src": "'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

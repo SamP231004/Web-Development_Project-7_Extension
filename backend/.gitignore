@@ -1,0 +1,98 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Editor files
+.vscode/
+*.suo
+*.user
+*.sln
+*.vspscc
+*.scc
+*.ncb
+*.aps
+*.aps.c
+*.aps.h
+*.pch
+*.obj
+*.plg
+*.ilk
+*.pdb
+*.idb
+*.opendb
+*.sdf
+*.userprefs
+*.VC*
+*.log
+*.bak
+*.tmp
+*.vbw
+*.ipch
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.res
+*.tlb
+*.tli
+*.map
+*.manifest
+*.localsettings.json
+
+# Testing
+/coverage/
+/test/reports/
+
+# Temporary files
+*.git/
+*.svn/
+.DS_Store
+nbproject/private/private.properties
+*.class
+*.pyc
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.Spotlight-V100
+
+# Docker
+Dockerfile*
+docker-compose.*.yml
+.dockerignore
+
+# Editor preferences
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# IDE specific files
+.project
+.classpath
+*.settings/
+*.metadata/
+
+# Build artifacts
+dist/
+build/
+
+# Local configuration
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Secrets
+secrets.json
+api_keys.json
+
+# AWS
+.aws/
+
+manifest.json.bak 
