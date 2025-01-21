@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Chat</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://web-development-project-7-extension.onrender.com/socket.io/socket.io.js"></script>
+    <script src="socket.io.min.js"></script>
 </head>
 <body>
     <div id="chat-container">
         <h3>Group Chat</h3>
-        <div id="messages">
-            
+        <div id="room-selection">
+            <h4>Select or Create Room</h4>
+            <input type="text" id="room-input" placeholder="Enter room name..."/>
+            <button id="join-room-btn">Join Room</button>
+            <button id="create-room-btn">Create Room</button>
         </div>
-        <input type="text" id="message-input" placeholder="Type a message..."/>
-        <button id="send-btn">Send</button>
+        <div id="messages" style="display: none;"></div>
+        <input type="text" id="message-input" placeholder="Type a message..." style="display: none;"/>
+        <button id="send-btn" style="display: none;">Send</button>
     </div>
     <script src="popup.js"></script>
 </body>

@@ -11,6 +11,25 @@
     margin-bottom: 10px;
     border: 1px solid #ddd;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6; /* Light green for sent messages */
+}
+
+.received {
+    align-self: flex-start;
+    background-color: #ffffff; /* White for received messages */
 }
 
 input[type="text"] {

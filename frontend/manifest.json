@@ -17,17 +17,7 @@
     "https://web-development-project-7-extension.onrender.com/*"
   ],
   "content_security_policy": {
-    "script-src": [
-      "'self'"
-    ],
-    "script-src-elem": [
-      "https://web-development-project-7-extension.onrender.com/socket.io/socket.io.js#d43f19733c4ce96292872d5ddf5d774fd6d7984322957e3c6b98fe224f4535bf"
-    ],
-    "connect-src": [
-      "'self'",
-      "https://web-development-project-7-extension.onrender.com/*"
-    ],
-    "object-src": "'self'"
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://web-development-project-7-extension.onrender.com"
   },
   "content_scripts": [
     {
