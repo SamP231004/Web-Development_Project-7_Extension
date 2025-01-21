@@ -8,12 +8,13 @@ const server = http.createServer(app);
 
 const io = socketIo(server, {
     cors: {
-        origin: "*",
+        origin: "*", 
         methods: ["GET", "POST"]
     }
 });
 
-let rooms = {}; 
+let rooms = {};
+
 app.use(express.json());
 app.use(express.static('frontend'));
 
@@ -35,23 +36,22 @@ io.on("connection", (socket) => {
 
     socket.on("createRoom", (room) => {
         if (!rooms[room]) {
-            rooms[room] = []; 
+            rooms[room] = [];
         }
         socket.join(room);
         console.log(`Room created: ${room}`);
     });
 
-
     socket.on("sendMessage", ({ room, content }) => {
-        console.log("Message received:", content); 
+        console.log("Message received:", content);
         const message = { content, timestamp: Date.now() };
 
         if (!rooms[room]) {
-            rooms[room] = []; 
+            rooms[room] = [];
         }
         rooms[room].push(message);
 
-        io.to(room).emit('roomMessage', message);
+        socket.to(room).emit('roomMessage', message);
     });
 
     socket.on("disconnect", () => {
