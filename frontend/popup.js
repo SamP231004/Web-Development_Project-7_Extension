@@ -15,7 +15,7 @@ socket.on("connect", () => {
 socket.on("message", (message) => {
     const messageElement = document.createElement("div");
     messageElement.textContent = message.content;
-    messageElement.classList.add("message", "received"); // Add received class
+    messageElement.classList.add("message", "received");
     messagesContainer.appendChild(messageElement);
 });
 
@@ -24,7 +24,7 @@ sendBtn.addEventListener("click", () => {
     if (message && currentRoom) {
         const messageElement = document.createElement("div");
         messageElement.textContent = message;
-        messageElement.classList.add("message", "sent"); // Add sent class
+        messageElement.classList.add("message", "sent"); 
         messagesContainer.appendChild(messageElement);
         
         socket.emit("sendMessage", { room: currentRoom, content: message });
@@ -63,10 +63,9 @@ function startChat() {
     sendBtn.style.display = "block";
 }
 
-// Listen for room messages
 socket.on("roomMessage", (message) => {
     const messageElement = document.createElement("div");
     messageElement.textContent = message.content;
-    messageElement.classList.add("message", "received"); // Add received class
+    messageElement.classList.add("message", "received");
     messagesContainer.appendChild(messageElement);
 });

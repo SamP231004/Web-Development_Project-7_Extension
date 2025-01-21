@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
     <link rel="stylesheet" href="style.css">
     <script src="socket.io.min.js"></script>
 </head>
@@ -13,12 +15,20 @@
         <div id="room-selection">
             <h4>Select or Create Room</h4>
             <input type="text" id="room-input" placeholder="Enter room name..."/>
-            <button id="join-room-btn">Join Room</button>
-            <button id="create-room-btn">Create Room</button>
+            <div>
+                <button id="join-room-btn">Join Room</button>
+                <button id="create-room-btn">Create Room</button>
+            </div>
         </div>
         <div id="messages" style="display: none;"></div>
-        <input type="text" id="message-input" placeholder="Type a message..." style="display: none;"/>
-        <button id="send-btn" style="display: none;">Send</button>
+        <div id="inputBox">
+            <input type="text" id="message-input" placeholder="Type a message..." style="display: none;"/>
+            <button id="send-btn" style="display: none;">
+                <span class="material-symbols-outlined">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>
