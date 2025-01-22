@@ -13,6 +13,9 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "icons": {
+    "48": "./Images_Used/image_1.png" 
+  },
   "host_permissions": [
     "https://web-development-project-7-extension.onrender.com/*"
   ],
